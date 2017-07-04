@@ -3,6 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CatService } from './services/cat.service';
+import { DepartmentService } from './services/department.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
@@ -17,6 +18,8 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DepartmentsComponent } from './departments/departments.component';
+
+
 
 @NgModule({
   declarations: [
@@ -40,6 +43,7 @@ import { DepartmentsComponent } from './departments/departments.component';
     AuthGuardLogin,
     AuthGuardAdmin,
     CatService,
+    DepartmentService,
     UserService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
