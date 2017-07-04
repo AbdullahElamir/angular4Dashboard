@@ -14,20 +14,33 @@
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
+      
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/all/vendor/bootstrap/css/bootstrap.min.css",
+      
+        "../node_modules/all/vendor/metisMenu/metisMenu.min.css",
+       
+
+        "../node_modules/all/dist/css/sb-admin-2.css",
+        "../node_modules/all/vendor/morrisjs/morris.css",
+        "../node_modules/all/vendor/font-awesome/css/font-awesome.min.css",
         "styles.scss"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/all/vendor/jquery/jquery.min.js",
         "../node_modules/tether/dist/js/tether.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "../node_modules/all/vendor/bootstrap/js/bootstrap.min.js",
+         "../node_modules/all/vendor/metisMenu/metisMenu.min.js",
+         "../node_modules/all/vendor/raphael/raphael.min.js",
+         "../node_modules/all/vendor/morrisjs/morris.min.js",
+         "../node_modules/all/data/morris-data.js",
+         "../node_modules/all/dist/js/sb-admin-2.js"
       ],
+   
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
