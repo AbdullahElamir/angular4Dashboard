@@ -1,5 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CatService } from './services/cat.service';
@@ -18,6 +17,8 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DepartmentsComponent } from './departments/departments.component';
+import { DepartmentShowComponent } from './department-show/department-show.component';
+
 
 
 
@@ -32,7 +33,9 @@ import { DepartmentsComponent } from './departments/departments.component';
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    DepartmentShowComponent,
+ 
   ],
   imports: [
     RoutingModule,

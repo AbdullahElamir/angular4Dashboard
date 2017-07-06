@@ -19,7 +19,7 @@ export class DepartmentsComponent implements OnInit {
      this.DepartmentService.addDepartment(this.addDeptForm.value).subscribe(
          res => {
         this.addDeptForm.reset();
-        this.toast.setMessage('item added successfully.', 'success');
+        this.toast.setMessage('Department added successfully.', 'success');
       },
       error => console.log(error)
     );

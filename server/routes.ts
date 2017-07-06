@@ -2,6 +2,7 @@ import * as express from 'express';
 
 import CatCtrl from './controllers/cat';
 import UserCtrl from './controllers/user';
+import DeptCtrl from './controllers/department';
 import Cat from './models/cat';
 import User from './models/user';
 
@@ -11,6 +12,7 @@ export default function setRoutes(app) {
 
   const catCtrl = new CatCtrl();
   const userCtrl = new UserCtrl();
+  const deprtCtrl = new DeptCtrl();
 
   // Cats
   router.route('/cats').get(catCtrl.getAll);
@@ -29,6 +31,11 @@ export default function setRoutes(app) {
   router.route('/user/:id').put(userCtrl.update);
   router.route('/user/:id').delete(userCtrl.delete);
 
+
+
+  router.route('/saveDepartment').post(deprtCtrl.insert);
+  router.route('/getDepartments').get(deprtCtrl.getAll);
+  
   // Apply the routes to our application with the prefix /api
   app.use('/api', router);
 

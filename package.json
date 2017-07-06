@@ -41,6 +41,7 @@
     "morgan": "^1.8.2",
     "rxjs": "^5.1.0",
     "tether": "1.4.0",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -49,6 +50,7 @@
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
+    "@types/underscore": "^1.8.1",
     "codelyzer": "~3.0.1",
     "concurrently": "^3.3.0",
     "jasmine-core": "~2.6.2",
