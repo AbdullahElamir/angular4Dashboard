@@ -21,6 +21,10 @@ export class DepartmentService {
   	return this.http.get('/api/getDepartments').map(res => res.json());
   }
 
+  deleteDepartment(id) : Observable<any> {
+    return this.http.delete(`/api/deleteDepartments/${id}`, this.options);
+  }
+
   getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10) {
       // calculate total pages
       let totalPages = Math.ceil(totalItems / pageSize);

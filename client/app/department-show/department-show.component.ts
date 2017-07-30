@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DepartmentService } from '../services/department.service';
+import { ToastComponent } from '../shared/toast/toast.component';
 @Component({
   selector: 'app-department-show',
   templateUrl: './department-show.component.html',
@@ -11,13 +12,30 @@ export class DepartmentShowComponent implements OnInit {
   /*$scope.pageSize,$scope.currentPage*/
 
   private allItems: any[];
- 
   pager: any = {};
- 
-    // paged items
   pagedItems: any[];
+  idDepartment;
+
  
-  
+  deleteItem(id) {
+    this.idDepartment =id;
+  }
+
+  deleteItemConfirm(){
+   
+    this.DepartmentService.deleteDepartment(this.idDepartment).subscribe(
+        res => {
+          this.getDepartment();
+          this.toast.setMessage('item deleted successfully.', 'success');
+        },
+        error => console.log(error)
+    );
+    
+  }
+
+
+ 
+
 
   getDepartment() {
     console.log("ddd");
@@ -34,7 +52,8 @@ export class DepartmentShowComponent implements OnInit {
 
 
 
-  constructor(private DepartmentService: DepartmentService        
+  constructor(private DepartmentService: DepartmentService,
+              public toast: ToastComponent        
              ) { 
     this.getDepartment();
   }
